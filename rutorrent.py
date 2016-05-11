@@ -21,6 +21,7 @@ class rutorrent(object):
         'type': 'object',
         'properties': {
             'user': {'type': 'string'},
+            'label': {'type': 'string'}
             'pass': {'type': 'string'},
             'url': {'type': 'string'},
             'path': {'type': 'string', 'format': 'path'},
@@ -44,7 +45,7 @@ class rutorrent(object):
                 # Add to default folder
                 path = ''
 
-            payload = {'dir_edit': path, 'url': entry['url']}
+            payload = {'dir_edit': path, 'url': entry['url'], 'label' : label}
 
             if(config['autostart'] == False):
                 payload.update({'torrents_start_stopped': '1'})
