@@ -21,7 +21,7 @@ class rutorrent(object):
         'type': 'object',
         'properties': {
             'user': {'type': 'string'},
-            'label': {'type': 'string'}
+            'label': {'type': 'string'},
             'pass': {'type': 'string'},
             'url': {'type': 'string'},
             'path': {'type': 'string', 'format': 'path'},
